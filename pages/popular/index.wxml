@@ -1,0 +1,22 @@
+<!--pages/popular/index.wxml-->
+
+<swiper
+  class="banner-wrap"
+  indicator-dots
+  autoplay
+  circular
+  interval="3000"
+  indicator-active-color="#fff">
+  
+  <block wx:for="{{ bannerData }}" wx:key="item.img_url">
+    <swiper-item class="banner-item">
+      <image src="{{item.img_url}}"></image>
+    </swiper-item>
+  </block>
+
+</swiper>
+
+<view class="film-list-wrap">
+  <film-item></film-item>
+  <film-item></film-item>
+</view>

@@ -1,0 +1,18 @@
+<!--components/filmItem/index.wxml-->
+
+<view class="film-item">
+  
+  <view class="film-cover">
+      <image
+        class="film-cover-img"
+        src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p31663.jpg">
+      </image>
+      
+      <view class="film-grade-wrap">
+        <text class="film-grade">4.2分</text>
+      </view>
+  </view>
+
+  <text>摆渡人</text>
+
+</view>

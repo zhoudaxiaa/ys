@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "film-item": "/components/filmItem/index"
+  },
+  "navigationBarTitleText": "热映电影"
+}
