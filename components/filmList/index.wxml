@@ -1,0 +1,57 @@
+<!--components/filmItem/index.wxml-->
+<view class="film-list-wrap">
+  <block
+    wx:for="{{filmList}}"
+    wx:key="{{item.title}}">
+    
+    <navigator url="/pages/filmDetail/index?id={{item.id}}">
+        <view class="film-item">
+    
+            <view class="film-cover">
+                <image
+                  class="film-cover-img"
+                  src="{{item.images.medium}}">
+                </image>
+                
+                <view class="film-grade-wrap">
+                  
+                  <text wx:if="{{item.rating.average === 0}}" class="film-grade">暂无评分</text>
+      
+                  <text wx:else class="film-grade">{{item.rating.average}}分</text>
+      
+                </view>
+            </view>
+          
+            <text class="film-title">{{item.title}}</text>
+          
+            <view class="film-tag-wrap">
+              
+              <block
+                wx:for="{{item.genres}}"
+                wx:for-item="tagItem"
+                wx:key="tagItem">
+      
+                <text class="film-tag-item">{{tagItem}}</text>
+      
+              </block>
+      
+            </view>
+          
+          </view>
+    </navigator>
+
+  </block>
+
+  <block wx:if="filmList">
+      <view class="film-more">
+    
+        <text wx:if="{{hasMore}}">正在拼命加载中...</text>
+      
+        <text wx:else>没有更多内容了</text>
+      </view>
+  </block>
+
+</view>
+
+
+

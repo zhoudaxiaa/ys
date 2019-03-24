@@ -16,7 +16,8 @@
 
 </swiper>
 
-<view class="film-list-wrap">
-  <film-item></film-item>
-  <film-item></film-item>
-</view>
+<film-list
+  film-list="{{filmList}}"
+  has-more="{{hasMore}}">
+</film-list>
+

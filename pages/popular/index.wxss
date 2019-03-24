@@ -3,10 +3,3 @@
   width: 750rpx;
   height: 300rpx;
 }
-
-.film-list-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 17rpx;
-}

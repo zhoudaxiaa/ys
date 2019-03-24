@@ -4,7 +4,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    filmList: Array,  // 电影列表数据
+    hasMore: Boolean,  // 上拉是否还有数据
   },
 
   /**
@@ -19,5 +20,6 @@ Component({
    */
   methods: {
 
-  }
+  },
+
 })

@@ -6,17 +6,23 @@
  * @Version: 1.0
  * @LastEditors: zhoudaxiaa
  * @Date: 2019-03-21 13:08:28
- * @LastEditTime: 2019-03-21 22:33:35
+ * @LastEditTime: 2019-03-24 20:19:48
  */
-const baseURL = 'https://www.easy-mock.com/mock/5c931a935a0ac91327b40855/ys/'
+const baseURL = 'https://sesine.com/mina/api/'
 
 function request (url, method = 'GET', data = {}, header = {}) {
+  
+  wx.showLoading({
+    title: '加载中...',
+  })
+
   return new Promise((resolve, reject) => {
     wx.request({
-      url: baseURL + url,
+      url: /^http/.test(url) ? url : baseURL + url,
       data: data,
       method: method, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: header, // 设置请求的 header
+      header: {...header, 'content-type': 'application/xml'
+      }, // 设置请求的 header
       success: function(res){
         if (res.statusCode === 200) resolve(res.data)
         
@@ -28,7 +34,7 @@ function request (url, method = 'GET', data = {}, header = {}) {
         reject(e)
       },
       complete: function() {
-        // complete
+        wx.hideLoading()
       }
     })
   })

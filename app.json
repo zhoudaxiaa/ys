@@ -1,15 +1,17 @@
 {
-  "pages":[
+  "pages": [
     "pages/popular/index",
     "pages/coming/index",
     "pages/top/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/filmDetail",
+    "pages/filmDetail/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#48a76d",
     "navigationBarTitleText": "电影推荐小程序",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#000",
