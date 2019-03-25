@@ -4,8 +4,35 @@
   <view class="my-hd-bg"
   style="background-image:url({{bgImg}})">
   </view>
+
+  <block wx:if="{{isLogin}}">
+    <image class="avatar" src="{{avatar}}"></image>
+    <text class="name">{{name}}</text>
+  </block>
+
+  <button
+    wx:else
+    class="login-btn"
+    open-type="getUserInfo"
+    bindgetuserinfo="getUserInfo">登录
+  </button>
+
 </view>
 
 <view class="my-op-wrap">
+  <view class="my-op-item">
+    <i class="my-op-icon icon-favorite"></i>
+    <text>收藏</text>
+  </view>
+
+  <view class="my-op-item">
+    <i class="my-op-icon icon-favorite"></i>
+    <text>收藏</text>
+  </view>
+
+  <view class="my-op-item">
+    <i class="my-op-icon icon-favorite"></i>
+    <text>收藏</text>
+  </view>
 
 </view>
