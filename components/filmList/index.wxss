@@ -54,14 +54,6 @@
   padding: 0 20rpx;
 }
 
-.film-tag-item {
-  margin-right: 10rpx;
-  color: #999;
-  padding: 0 10rpx;
-  border: 1px solid #ccc;
-  border-radius: 10rpx;
-}
-
 .film-more {
   display: flex;
   height: 100rpx;

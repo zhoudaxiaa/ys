@@ -4,8 +4,8 @@
     "pages/coming/index",
     "pages/top/index",
     "pages/my/index",
-    "pages/filmDetail",
-    "pages/filmDetail/index"
+    "pages/filmDetail/index",
+    "pages/personInfo/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -6,9 +6,9 @@
  * @Version: 1.0
  * @LastEditors: zhoudaxiaa
  * @Date: 2019-03-21 13:08:28
- * @LastEditTime: 2019-03-24 20:19:48
+ * @LastEditTime: 2019-03-25 16:55:31
  */
-const baseURL = 'https://sesine.com/mina/api/'
+const baseURL = 'http://douban.zhoudaxiaa.com/'
 
 function request (url, method = 'GET', data = {}, header = {}) {
   
@@ -21,8 +21,7 @@ function request (url, method = 'GET', data = {}, header = {}) {
       url: /^http/.test(url) ? url : baseURL + url,
       data: data,
       method: method, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {...header, 'content-type': 'application/xml'
-      }, // 设置请求的 header
+      header: {...header, 'content-type': 'application/xml'}, // 设置请求的 header，这里加了个头，是为了豆瓣的api
       success: function(res){
         if (res.statusCode === 200) resolve(res.data)
         

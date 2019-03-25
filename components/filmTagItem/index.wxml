@@ -1,0 +1,8 @@
+<!--components/tagItem    /index.wxml-->
+<block
+  wx:for="{{tags}}"
+  wx:key="item">
+
+  <text class="tag-item">{{item}}</text>
+
+</block>

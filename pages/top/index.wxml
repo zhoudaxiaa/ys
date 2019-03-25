@@ -1,2 +1,5 @@
 <!--pages/top/index.wxml-->
-<text>pages/top/index.wxml</text>
+<film-list
+  film-list="{{filmList}}"
+  hasMore="{{hasMore}}">
+</film-list>

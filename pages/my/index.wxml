@@ -1,2 +1,11 @@
 <!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+
+<view class="my-hd">
+  <view class="my-hd-bg"
+  style="background-image:url({{bgImg}})">
+  </view>
+</view>
+
+<view class="my-op-wrap">
+
+</view>

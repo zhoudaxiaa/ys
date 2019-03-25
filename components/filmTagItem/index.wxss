@@ -1,0 +1,9 @@
+/* components/tagItem    /index.wxss */
+
+.tag-item {
+  padding: 5rpx 10rpx;
+  margin-right: 15rpx;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  color: #666;
+}

@@ -1,0 +1,49 @@
+/* pages/personInfo/index.wxss */
+
+.fp-hd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 560rpx;
+  overflow: hidden;
+  color: #fff;
+  background-color: rgba(0,0,0,.2)
+}
+
+.fp-hd-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(15rpx);
+  z-index: -2;
+  transform: scale(1.2);
+}
+
+.fp-avatar {
+  margin-top: 20rpx;
+  height: 300rpx;
+  width: 300rpx;
+  border-radius: 50%;
+  box-shadow: 0, 0, 160rpx, rgba(255,255,255,.6);
+}
+
+.fp-name {
+  margin-top: 20rpx;
+  padding: 5rpx 20rpx;
+  border-radius: 50rpx;
+  background-color: rgba(0,0,0,.2);
+  font-size: 32rpx;
+}
+
+.fp-name-en {
+  padding: 10rpx 0;
+}
+
+.favorite-btn-wrap {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}

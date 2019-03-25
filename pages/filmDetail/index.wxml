@@ -8,36 +8,50 @@
 
     <view
       class="fd-hd-bg"
-      style="background-image: url('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549523952.jpg')"></view>
+      style="background-image: url({{filmDetail.images.large}})"></view>
 
     <view class="fd-cover">
 
       <image
         class="fd-cover-img"
-        src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549523952.jpg">
+        src="{{filmDetail.images.medium}}">
       </image>
 
-      <view class="fd-favorite">收藏</view>
+      <favorite-btn class="favorite-btn-wrap"></favorite-btn>
 
     </view>
 
     <view class="fd">
-      <text class="fd-title">一个母亲的复仇</text>
+      <text class="fd-title">{{filmDetail.title}}</text>
 
       <view class="fd-attr-item">
-        导演：<text>舒服舒服撒</text>
+        <text>导演：</text>
+        <text>{{filmDetail.director[0].name}}</text>
       </view>
 
       <view class="fd-attr-item">
-        演员：<text>舒服舒服撒</text>
+        <text>演员：</text>
+        <block
+          wx:for="{{filmDetail.casts}}"
+          wx:key="{{item.id}}">
+
+          <text>{{item.name}}</text>
+          <block wx:if="{{index !== filmDetail.casts.length - 1}}">/</block>
+
+        </block>
+
       </view>
 
       <view class="fd-attr-item">
-        豆瓣评分：<text>舒服舒服撒</text>
+        <text>豆瓣评分：</text>
+        <text wx:if="filmDetail.rating.average === 0">暂无评分</text>
+
+        <text wx:else>{{filmDetail.rating.average}}</text>
       </view>
 
       <view class="fd-attr-item">
-        上映年份：<text>舒服舒服撒</text>
+        <text>上映年份：</text>
+        <text>{{filmDetail.year}}</text>
       </view>
 
     </view>
@@ -46,17 +60,17 @@
   <view class="fd-data">
 
     <view class="fd-data-item">
-      <text class="fd-data-num">999</text>
+      <text class="fd-data-num">{{filmDetail.reviews_count}}</text>
       <text class="fd-data-title">看过</text>
     </view>
 
     <view class="fd-data-item">
-      <text class="fd-data-num">999</text>
+      <text class="fd-data-num">{{filmDetail.wish_count}}</text>
       <text class="fd-data-title">想看</text>
     </view>
 
     <view class="fd-data-item">
-      <text class="fd-data-num">999</text>
+      <text class="fd-data-num">{{filmDetail.ratings_count}}</text>
       <text class="fd-data-title">评分人数</text>
     </view>
 
@@ -65,76 +79,61 @@
   <!-- ct: container -->
   <view class="fd-ct">
     <view class="fd-ct-title">剧情简介</view>
-    <fd-ct-intro>舒服舒服撒的发生纠纷是否就是了</fd-ct-intro>
+    <fd-ct-intro>{{filmDetail.summary}}</fd-ct-intro>
 
     <view class="fd-ct-title">导演/演员</view>
+    
     <view class="fd-ct-person">
-      <view class="fd-ct-person-item">
+      <!-- 导演 -->
+      <block
+        wx:for="{{filmDetail.directors}}"
+        wx:key="item.id">
 
-        <image
-          class="fd-ct-person-img"
-          src="https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1535337603.88.jpg">
-        </image>
+        <navigator url="/pages/personInfo/index?id={{item.id}}">
+          <view class="fd-ct-person-item">
 
-        <text class="fd-ct-person-name">舒服舒服撒</text>
-        <text class="fd-ct-person-role">导演</text>
+            <image
+              class="fd-ct-person-img"
+              src="{{item.avatars.medium}}">
+            </image>
 
-      </view>
+            <text class="fd-ct-person-name">{{item.name}}</text>
+            <text class="fd-ct-person-role">导演</text>
 
-      <view class="fd-ct-person-item">
+          </view>
+        </navigator>
+      </block>
 
-          <image
-            class="fd-ct-person-img"
-            src="https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1535337603.88.jpg">
-          </image>
-  
-          <text class="fd-ct-person-name">舒服舒服撒</text>
-          <text class="fd-ct-person-role">导演</text>
-  
-        </view>
+      <!-- 演员 -->
+      <block
+        wx:for="{{filmDetail.casts}}"
+        wx:key="item.id">
 
-        <view class="fd-ct-person-item">
+        <navigator url="/pages/personInfo/index?id={{item.id}}">
+          <view class="fd-ct-person-item">
 
-        <image
-          class="fd-ct-person-img"
-          src="https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1535337603.88.jpg">
-        </image>
+            <image
+              class="fd-ct-person-img"
+              src="{{item.avatars.medium}}">
+            </image>
+    
+            <text class="fd-ct-person-name">{{item.name}}</text>
+            <text class="fd-ct-person-role">演员</text>
+    
+          </view>
+        </navigator>
 
-        <text class="fd-ct-person-name">舒服舒服撒</text>
-        <text class="fd-ct-person-role">导演</text>
+      </block>
 
-      </view>
-
-      <view class="fd-ct-person-item">
-
-        <image
-          class="fd-ct-person-img"
-          src="https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1535337603.88.jpg">
-        </image>
-
-        <text class="fd-ct-person-name">舒服舒服撒</text>
-        <text class="fd-ct-person-role">导演</text>
-
-      </view>
-
-      <view class="fd-ct-person-item">
-
-        <image
-          class="fd-ct-person-img"
-          src="https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1535337603.88.jpg">
-        </image>
-
-        <text class="fd-ct-person-name">舒服舒服撒</text>
-        <text class="fd-ct-person-role">导演</text>
-
-      </view>
     </view>
 
     <view class="fd-ct-title">标签</view>
     
     <view class="fd-ct-tag">
 
-        <text class="fd-ct-tag-item">科幻</text>
+        <film-tag-item
+          tags="{{filmDetail.genres}}">
+        </film-tag-item>
 
     </view>
 

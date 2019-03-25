@@ -1,0 +1,29 @@
+<!--pages/personInfo/index.wxml-->
+<!-- fp: film-person -->
+<view class="fp-hd">
+  <view 
+    class="fp-hd-bg"
+    style="background-image:url({{celebrity.avatars.large}})">
+  </view>
+
+  <image
+    class="fp-avatar"
+    src="{{celebrity.avatars.medium}}">
+  </image>
+
+  <text class="fp-name">{{celebrity.name}}</text>
+
+  <text class="fp-name-en">{{celebrity.name_en}}</text>
+
+  <text class="fp-place">{{celebrity.born_place}}</text>
+
+  <favorite-btn class="favorite-btn-wrap"></favorite-btn>
+
+</view>
+
+<view class="fp-works">
+  <film-list
+    film-list="{{filmList}}"
+    hasMore="{{false}}">
+  </film-list>
+</view>

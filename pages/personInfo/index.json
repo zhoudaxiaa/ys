@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "favorite-btn": "/components/favoriteBtn/index",
+    "film-list": "/components/filmList/index"
+  },
+  "navigationBarTitleText": "人物介绍"
+
+}

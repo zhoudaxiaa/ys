@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "favorite-btn": "/components/favoriteBtn/index",
+    "film-tag-item": "/components/filmTagItem/index"
+  },
+  "navigationBarTitleText": "电影详情"
 }

@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "film-list": "/components/filmList/index"
+  },
+  "navigationBarTitleText": "即将上映"
+
 }

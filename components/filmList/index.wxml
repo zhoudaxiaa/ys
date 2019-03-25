@@ -26,14 +26,9 @@
           
             <view class="film-tag-wrap">
               
-              <block
-                wx:for="{{item.genres}}"
-                wx:for-item="tagItem"
-                wx:key="tagItem">
-      
-                <text class="film-tag-item">{{tagItem}}</text>
-      
-              </block>
+              <film-tag-item
+                tags="{{item.genres}}">
+              </film-tag-item>
       
             </view>
           

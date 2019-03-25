@@ -1,2 +1,6 @@
 <!--pages/coming/index.wxml-->
-<text>pages/coming/index.wxml</text>
+
+<film-list
+  film-list="{{filmList}}"
+  hasMore="{{hasMore}}">
+</film-list>
