@@ -1,0 +1,69 @@
+/* pages/skin/index.wxss */
+
+.skin-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skin-item {
+  position: relative;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  width: 710rpx;
+  height: 360rpx;
+  border-radius: 40rpx;
+  overflow: hidden;
+  box-shadow: 0 20rpx 50rpx rgba(0,0,0,.3)
+}
+
+.skin-item-active {
+  border: 6rpx solid #48a76d;
+}
+
+.skin-item-active:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -80rpx;
+  right: -80rpx;
+  z-index: 4;
+  width: 160rpx;
+  height: 160rpx;
+  transform: rotate(45deg);
+  background-color: #47a86c;
+}
+
+.skin-item-active:after {
+  display: block;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+  content: '在用';
+  z-index: 4;
+  transform: rotate(45deg);
+}
+
+.skin-img {
+  width: 100%;
+  height: 100%;
+}
+
+.skin-title-wrap {
+  margin-top: -80rpx;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  background-color: rgba(0,0,0,.4)
+}
+
+.skin-title {
+  color: #fff;
+  font-size: 32rpx;
+  padding-left: 50rpx;
+}

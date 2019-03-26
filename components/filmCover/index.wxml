@@ -1,0 +1,41 @@
+<!--components/filmCover/index.wxml-->
+
+<!-- fc: film-cover -->
+<view class="fc-wrap">
+  <view class="fc">
+
+    <image
+      class="fc-img"
+      src="{{filmCover.imgUrl}}">
+    </image>
+  
+  </view>
+  
+  <view class="fc-attr-wrap {{isFilmDetail ? 'detail-style' : ''}}">
+    <text class="fc-title">{{filmCover.title}}</text>
+  
+    <view class="fc-attr-item {{isFilmDetail ? 'detail-style' : ''}}">
+      <text>导演：</text>
+      <text>{{filmCover.director}}</text>
+    </view>
+  
+    <view class="fc-attr-item {{isFilmDetail ? 'detail-style' : ''}}">
+      <text>演员：</text>
+      <text>{{filmCover.casts}}</text>
+  
+    </view>
+  
+    <view class="fc-attr-item {{isFilmDetail ? 'detail-style' : ''}}">
+      <text>豆瓣评分：</text>
+      <text wx:if="{{filmCover.rating === 0}}">暂无评分</text>
+  
+      <text wx:else>{{filmCover.rating}}</text>
+    </view>
+  
+    <view class="fc-attr-item {{isFilmDetail ? 'detail-style' : ''}}">
+      <text>上映年份：</text>
+      <text>{{filmCover.year}}</text>
+    </view>
+  
+  </view>
+</view>

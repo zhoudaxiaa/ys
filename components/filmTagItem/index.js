@@ -6,7 +6,7 @@ Component({
   properties: {
     tags: {
       type: Array,
-      default: []
+      value: []
     }
   },
 

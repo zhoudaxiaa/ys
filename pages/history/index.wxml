@@ -1,0 +1,66 @@
+<!--pages/history/index.wxml-->
+
+<!-- his: history -->
+<view class="his-tab-wrap">
+
+  <view class="his-tab-item his-tab-active">
+    <text>电影</text>
+  </view>
+  
+  <view class="his-tab-item">
+    <text>人物</text>
+  </view>
+
+</view>
+
+<block hidden="{{isFilms}}">
+    <view class="his-film-cont">
+
+      <block
+        wx:if="{{historyFilms.length === 0}}">
+        
+        <view class="no-films">
+          <view class="no-tip">亲，目前木有浏览记录哦！</view>
+    
+          <navigator url="/pages/popular/index">
+            <text class="no-action">去逛逛</text>
+          </navigator>
+        </view>
+    
+      </block>
+
+      <block wx:else>
+        
+        <block
+          wx:for="{{historyFilms}}"
+          wx:key="{{item.time}}">
+      
+          <view class="his-film-item">
+      
+            <text class="his-film-time">{{item.time}}</text>
+      
+            <navigator url="/pages/filmDetail/index?id={{item.films.id}}">
+              <film-cover
+                film-cover="{{item.films}}"
+                is-film-detail="{{false}}">
+              </film-cover>
+            </navigator>
+      
+          </view>
+      
+        </block>
+      
+        <view class="film-more">
+          <text>没有更多内容了</text>
+        </view>
+
+      </block>
+    
+    </view>
+</block>
+
+<block hidden="{{!isFilms}}">
+  <view class="his-person-cont">
+    666
+  </view>
+</block>

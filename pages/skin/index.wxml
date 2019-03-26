@@ -1,0 +1,10 @@
+<!--pages/skin/index.wxml-->
+
+<view class="skin-wrap">
+  <view class="skin-item .skin-item-active">
+    <image class="skin-img" src="https://static.sesine.com/wechat-weapp-movie//images/user_bg_1.jpg"></image>
+    <view class="skin-title-wrap">
+      <text class="skin-title">公路</text>
+    </view>
+  </view>
+</view>

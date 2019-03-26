@@ -10,51 +10,12 @@
       class="fd-hd-bg"
       style="background-image: url({{filmDetail.images.large}})"></view>
 
-    <view class="fd-cover">
-
-      <image
-        class="fd-cover-img"
-        src="{{filmDetail.images.medium}}">
-      </image>
-
-      <favorite-btn class="favorite-btn-wrap"></favorite-btn>
-
-    </view>
-
-    <view class="fd">
-      <text class="fd-title">{{filmDetail.title}}</text>
-
-      <view class="fd-attr-item">
-        <text>导演：</text>
-        <text>{{filmDetail.director[0].name}}</text>
-      </view>
-
-      <view class="fd-attr-item">
-        <text>演员：</text>
-        <block
-          wx:for="{{filmDetail.casts}}"
-          wx:key="{{item.id}}">
-
-          <text>{{item.name}}</text>
-          <block wx:if="{{index !== filmDetail.casts.length - 1}}">/</block>
-
-        </block>
-
-      </view>
-
-      <view class="fd-attr-item">
-        <text>豆瓣评分：</text>
-        <text wx:if="filmDetail.rating.average === 0">暂无评分</text>
-
-        <text wx:else>{{filmDetail.rating.average}}</text>
-      </view>
-
-      <view class="fd-attr-item">
-        <text>上映年份：</text>
-        <text>{{filmDetail.year}}</text>
-      </view>
-
-    </view>
+    <film-cover
+      film-cover="{{filmCover}}">
+    </film-cover>
+    
+    <favorite-btn class="favorite-btn-wrap"></favorite-btn>
+    
   </view>
 
   <view class="fd-data">

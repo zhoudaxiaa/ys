@@ -2,12 +2,13 @@
 
 .fd-hd {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position: relative;
   height: 560rpx;
   overflow: hidden;
   padding: 80rpx 35rpx 0;
-  background-clip: padding-box;
-  justify-content: space-between;
+  background-color: rgba(0,0,0,.2);
 }
 
 .fd-hd-bg {
@@ -20,37 +21,11 @@
   z-index: -2;
 }
 
-.fd-cover {
-  display: flex;
-  width: 300rpx;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.fd-cover-img {
-  width: 300rpx;
-  height: 420rpx;
-  border-radius: 10rpx;
-  box-shadow: 0 30rpx 150rpx rgba(255, 255, 255, .3)
-}
-
 .favorite-btn-wrap {
   margin-top: -15rpx;
-}
-
-.fd {
-  padding-left: 35rpx;
-  color: #fff;
-}
-
-.fd-title {
-  font-size: 42rpx;
-  margin-bottom: 10rpx;
-}
-
-.fd-attr-item {
-  color: #eee;
-  margin-top: 20rpx;
+  display: flex;
+  width: 300rpx;
+  justify-content: center;
 }
 
 .fd-data {

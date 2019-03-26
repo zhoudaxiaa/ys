@@ -5,7 +5,13 @@
     "pages/top/index",
     "pages/my/index",
     "pages/filmDetail/index",
-    "pages/personInfo/index"
+    "pages/personInfo/index",
+    "pages/skin/index",
+    "pages/favorite/index",
+    "pages/history/index",
+    "pages/shake/index",
+    "pages/gallery/index",
+    "pages/setting/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -6,9 +6,41 @@ Page({
    */
   data: {
     bgImg: 'https://static.sesine.com/wechat-weapp-movie//images/user_bg_1.jpg',
-    isLogin: false,
-    avatar: '',
-    name: '',
+    isLogin: false,  // 是否登录
+    avatar: '',  // 头像
+    name: '',  // 昵称
+    opList: [  // 功能操作列表
+      {
+        icon: 'favorite',
+        title: '收藏',
+        link: '/pages/favorite/index'
+      },
+      
+      {
+        icon: 'history',
+        title: '浏览记录',
+        link: '/pages/history/index'
+      },
+      
+      {
+        icon: 'shake',
+        title: '摇一摇',
+        link: '/pages/shake/index'
+      },
+      
+      {
+        icon: 'gallery',
+        title: '相册',
+        link: '/pages/gallery/index'
+      },
+      
+      {
+        icon: 'setting',
+        title: '设置',
+        link: '/pages/setting/index'
+      },
+      
+    ], 
   },
 
   /**

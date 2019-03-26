@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "film-cover": "/components/filmCover/index"
+  }
+}

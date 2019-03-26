@@ -17,22 +17,23 @@
     bindgetuserinfo="getUserInfo">登录
   </button>
 
+  <navigator url="/pages/skin/index">
+    <view class="skin-wrap"></view>
+  </navigator>
+
 </view>
 
 <view class="my-op-wrap">
-  <view class="my-op-item">
-    <i class="my-op-icon icon-favorite"></i>
-    <text>收藏</text>
-  </view>
+  
+  <block wx:for="{{opList}}" wx:key="{{item.link}}">
+    
+    <navigator url="{{item.link}}">
+      <view class="my-op-item">
+        <i class="my-op-icon icon-{{item.icon}}"></i>
+        <text>{{item.title}}</text>
+      </view>
+    </navigator>
 
-  <view class="my-op-item">
-    <i class="my-op-icon icon-favorite"></i>
-    <text>收藏</text>
-  </view>
-
-  <view class="my-op-item">
-    <i class="my-op-icon icon-favorite"></i>
-    <text>收藏</text>
-  </view>
+  </block>
 
 </view>

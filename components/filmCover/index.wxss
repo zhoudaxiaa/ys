@@ -1,0 +1,42 @@
+/* components/filmCover/index.wxss */
+
+.fc-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.fc {
+  display: flex;
+  width: 300rpx;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fc-img {
+  width: 300rpx;
+  height: 420rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 30rpx 150rpx rgba(255, 255, 255, .3)
+}
+
+.fc-attr-wrap {
+  padding-left: 35rpx;
+  color: #444;
+}
+
+.fc-attr-wrap.detail-style {
+  color: #fff
+}
+
+.fc-title {
+  font-size: 42rpx;
+  margin-bottom: 10rpx;
+}
+
+.fc-attr-item {
+  color: #666;
+  margin-top: 20rpx;
+}
+
+.fc-attr-item.detail-style {
+  color: #eee;
+}
