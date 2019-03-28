@@ -10,8 +10,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    celebrity: {}, // 名人的信息
+    historyCelebrity: [], // 历史浏览人物记录
+    celebrity: {}, // 人物资料
     filmList: [], // 电影列表
+    id: '',  // 当前人物的id
   },
 
 /**
@@ -19,7 +21,6 @@ Page({
  * @param {number} id 根据id获取名人的信息 
  * @return: 
  */
-
   async initData (id) {
     try {
       const data = await getCelebrity(id)
@@ -50,28 +51,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      id: options.id
+    })
+
     this.initData(options.id)
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
   },
 
   /**
@@ -88,17 +72,4 @@ Page({
 
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

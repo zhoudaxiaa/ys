@@ -44,22 +44,22 @@
 
     <view class="fd-ct-title">导演/演员</view>
     
-    <view class="fd-ct-person">
+    <view class="fd-ct-celebrity">
       <!-- 导演 -->
       <block
         wx:for="{{filmDetail.directors}}"
         wx:key="item.id">
 
-        <navigator url="/pages/personInfo/index?id={{item.id}}">
-          <view class="fd-ct-person-item">
+        <navigator url="/pages/celebrityDetail/index?id={{item.id}}">
+          <view class="fd-ct-celebrity-item">
 
             <image
-              class="fd-ct-person-img"
+              class="fd-ct-celebrity-img"
               src="{{item.avatars.medium}}">
             </image>
 
-            <text class="fd-ct-person-name">{{item.name}}</text>
-            <text class="fd-ct-person-role">导演</text>
+            <text class="fd-ct-celebrity-name">{{item.name}}</text>
+            <text class="fd-ct-celebrity-role">导演</text>
 
           </view>
         </navigator>
@@ -70,16 +70,16 @@
         wx:for="{{filmDetail.casts}}"
         wx:key="item.id">
 
-        <navigator url="/pages/personInfo/index?id={{item.id}}">
-          <view class="fd-ct-person-item">
+        <navigator url="/pages/celebrityDetail/index?id={{item.id}}">
+          <view class="fd-ct-celebrity-item">
 
             <image
-              class="fd-ct-person-img"
+              class="fd-ct-celebrity-img"
               src="{{item.avatars.medium}}">
             </image>
     
-            <text class="fd-ct-person-name">{{item.name}}</text>
-            <text class="fd-ct-person-role">演员</text>
+            <text class="fd-ct-celebrity-name">{{item.name}}</text>
+            <text class="fd-ct-celebrity-role">演员</text>
     
           </view>
         </navigator>

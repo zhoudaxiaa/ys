@@ -1,0 +1,29 @@
+<!--pages/celebrityCelebarity/index.wxml-->
+<!-- fc: film-celebrity -->
+<view class="fc-hd">
+  <view 
+    class="fc-hd-bg"
+    style="background-image:url({{celebrity.avatars.large}})">
+  </view>
+
+  <image
+    class="fc-avatar"
+    src="{{celebrity.avatars.medium}}">
+  </image>
+
+  <text class="fc-name">{{celebrity.name}}</text>
+
+  <text class="fc-name-en">{{celebrity.name_en}}</text>
+
+  <text class="fc-place">{{celebrity.born_place}}</text>
+
+  <favorite-btn class="favorite-btn-wrap"></favorite-btn>
+
+</view>
+
+<view class="fc-works">
+  <film-list
+    film-list="{{filmList}}"
+    hasMore="{{false}}">
+  </film-list>
+</view>

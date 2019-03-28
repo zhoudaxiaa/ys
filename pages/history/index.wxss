@@ -19,18 +19,19 @@
 }
 
 .his-film-cont {
-  padding: 0 30rpx 30rpx;
-}
-
-.his-film-item {
-  margin-top: 20rpx;
+  padding: 30rpx;
 }
 
 .his-film-time {
+  margin-top: 20rpx;
   display: block;
   margin-bottom: 10rpx;
   font-size: 60rpx;
   color: #e5e5e5;
+}
+
+.no-tips-wrap {
+  padding-top:200rpx;
 }
 
 .film-more {
