@@ -1,6 +1,9 @@
 /**app.wxss**/
 page {
-  box-sizing: border-box;
   font-family: "微软雅黑";
   font-size: 28rpx;
-} 
+}
+
+page view {
+  box-sizing: border-box;
+}

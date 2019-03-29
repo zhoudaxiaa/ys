@@ -4,7 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    celebrityCover: {  // 人物封面信息
+      type: Object,
+      value: {}
+    }
   },
 
   /**

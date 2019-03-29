@@ -80,7 +80,7 @@ Page({
    */
   onUnload () {
     let historyFilms = wx.getStorageSync('historyFilms') || []
-console.log(historyFilms)
+// console.log(historyFilms)
 
     let data = {
       date: getDate(new Date()),
@@ -112,7 +112,7 @@ console.log(historyFilms)
 
       // 更新顺序
       historyFilms = historyFilms.splice(i,1).concat(historyFilms)
-      console.log(historyFilms)
+      // console.log(historyFilms)
       wx.setStorage({
         key: 'historyFilms',
         data: historyFilms

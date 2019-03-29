@@ -20,7 +20,7 @@
 </view>
 
 <!-- 电影记录 -->
-<view hidden="{{tabName === 'celebrity' || false}}" class="his-film-cont">
+<view hidden="{{tabName === 'celebrity' || false}}" class="his-cont">
 
   <block
     wx:if="{{historyFilms.length === 0}}">
@@ -37,9 +37,9 @@
       wx:for="{{historyFilms}}"
       wx:key="{{item.time}}">
   
-      <view class="his-film-item">
+      <view class="his-item">
   
-        <text class="his-film-time">{{item.time}}</text>
+        <text class="his-time">{{item.time}}</text>
   
         <navigator url="/pages/filmDetail/index?id={{item.films.id}}">
           <film-cover
@@ -52,7 +52,7 @@
   
     </block>
   
-    <view class="film-more">
+    <view class="cont-more">
       <text>没有更多内容了</text>
     </view>
 
@@ -61,7 +61,7 @@
 </view>
 
 <!-- 人物记录 -->
-<view hidden="{{tabName === 'film' || false}}" class="his-film-cont">
+<view hidden="{{tabName === 'film' || false}}" class="his-cont">
 
     <block
       wx:if="{{historyCelebrity.length === 0}}">
@@ -78,17 +78,19 @@
         wx:for="{{historyCelebrity}}"
         wx:key="{{item.time}}">
     
-        <view class="his-film-item">
+        <view class="his-item">
     
-          <text class="his-film-time">{{item.time}}</text>
+          <text class="his-time">{{item.time}}</text>
     
-          
+          <celebrity-cover
+            celebrity-cover="{{item.celebritys}}">
+          </celebrity-cover>
     
         </view>
     
       </block>
     
-      <view class="film-more">
+      <view class="cont-more">
         <text>没有更多内容了</text>
       </view>
   

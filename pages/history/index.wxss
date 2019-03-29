@@ -18,11 +18,11 @@
   border-bottom: 4rpx solid #48a76d;
 }
 
-.his-film-cont {
+.his-cont {
   padding: 30rpx;
 }
 
-.his-film-time {
+.his-time {
   margin-top: 20rpx;
   display: block;
   margin-bottom: 10rpx;
@@ -34,7 +34,7 @@
   padding-top:200rpx;
 }
 
-.film-more {
+.cont-more {
   display: flex;
   height: 100rpx;
   width: 100%;

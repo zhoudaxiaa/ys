@@ -13,16 +13,19 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad (options) {
     const historyFilms = wx.getStorageSync('historyFilms') || []
+    const historyCelebrity = wx.getStorageSync('historyCelebrity') || []
+    console.log(historyCelebrity)
     this.setData({
-      historyFilms
+      historyFilms,
+      historyCelebrity
     })
   },
 
   /**
    * @description: 切换tab
-   * @param {type} 
+   * @param {object} e 小程序提供的事件对象
    * @return: 
    */
   toggleTab (e) {
