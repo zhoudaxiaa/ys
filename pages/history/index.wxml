@@ -82,9 +82,11 @@
     
           <text class="his-time">{{item.time}}</text>
     
-          <celebrity-cover
-            celebrity-cover="{{item.celebritys}}">
-          </celebrity-cover>
+          <navigator url="/pages/celebrityDetail/index?id={{item.celebritys.id}}">
+            <celebrity-cover
+              celebrity-cover="{{item.celebritys}}">
+            </celebrity-cover>
+          </navigator>
     
         </view>
     
