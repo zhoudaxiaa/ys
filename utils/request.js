@@ -41,7 +41,7 @@ function request (url, method = 'GET', data = {}, header = {}) {
 
 module.exports = {
   get (url, data) {
-    return request(url, 'GET', data)
+    return request(`${url}&apikey=0df993c66c0c636e29ecbb5344252a4a`, 'GET', data)
   },
   post (url, data) {
     return request(url, 'POST', data, {

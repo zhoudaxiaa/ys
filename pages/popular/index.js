@@ -28,7 +28,7 @@ Page({
     try {
       const data = await getBanner()
       this.setData({
-        bannerData: data
+        bannerData: data.subjects
       })
     } catch (e) {
       console.log(e)

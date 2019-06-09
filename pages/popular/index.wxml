@@ -10,7 +10,7 @@
   
   <block wx:for="{{ bannerData }}" wx:key="item.img_url">
     <swiper-item class="banner-item">
-      <image src="{{item.img_url}}"></image>
+      <image src="{{item.images.medium}}"></image>
     </swiper-item>
   </block>
 

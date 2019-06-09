@@ -6,7 +6,7 @@
  * @Version: 1.0
  * @LastEditors: zhoudaxiaa
  * @Date: 2019-03-21 13:41:06
- * @LastEditTime: 2019-03-25 15:52:16
+ * @LastEditTime: 2019-06-09 21:32:10
  */
 const app = getApp()
 
@@ -25,7 +25,7 @@ const config = {
  * @return: 
  */
 export function getBanner() {
-  return app.request.get('https://www.easy-mock.com/mock/5c931a935a0ac91327b40855/ys/banner')
+  return app.request.get(`${config.in_theaters}?start=11&count=5`)
 }
 
 /**
