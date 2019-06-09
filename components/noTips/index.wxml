@@ -1,0 +1,8 @@
+<!--components/noTips/index.wxml-->
+<view class="no-tips">
+    <view class="no-tips-title">亲，目前木有浏览记录哦！</view>
+
+    <navigator url="/pages/popular/index">
+      <text class="no-action">去逛逛</text>
+    </navigator>
+  </view>

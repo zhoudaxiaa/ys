@@ -1,2 +1,2 @@
 <!--components/favoriteBtn/index.wxml-->
-<view class="favorite-btn">收藏</view>
+<text class="favorite-btn">收藏</text>

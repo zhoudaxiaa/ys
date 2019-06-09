@@ -1,0 +1,35 @@
+/* components/celebrityCover/index.wxss */
+
+.cc {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50rpx;
+  border: 1rpx solid rgb(220, 220, 220);
+  border-radius: 10rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0,0,0,.1);
+}
+
+.cc-avatar {
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 50%;
+}
+
+.cc-attr-wrap {
+  width: 300rpx;
+}
+
+.cc-attr-item {
+  margin: 10rpx 0;
+}
+
+.cc-attr-item text {
+  color: #999;
+}
+
+.cc-attr-item .cc-name {
+  font-size: 40rpx;
+  color: #666;
+}

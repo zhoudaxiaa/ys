@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "film-cover": "/components/filmCover/index"
+    "film-cover": "/components/filmCover/index",
+    "celebrity-cover": "/components/celebrityCover/index",
+    "no-tips": "/components/noTips/index"
   }
 }

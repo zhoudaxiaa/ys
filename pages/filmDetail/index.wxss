@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
-  height: 560rpx;
+  height: 600rpx;
   overflow: hidden;
   padding: 80rpx 35rpx 0;
   background-color: rgba(0,0,0,.2);
@@ -23,9 +23,8 @@
 
 .favorite-btn-wrap {
   margin-top: -15rpx;
-  display: flex;
   width: 300rpx;
-  justify-content: center;
+  text-align: center;
 }
 
 .fd-data {
@@ -79,7 +78,7 @@
   color: #666;
 }
 
-.fd-ct-person {
+.fd-ct-celebrity {
   display: flex;
   width: 100%;
   height: 480rpx;
@@ -87,27 +86,27 @@
   overflow-y: hidden;
 }
 
-.fd-ct-person-item {
+.fd-ct-celebrity-item {
   margin-left: 20rpx;
   text-align: center;
 }
 
-.fd-ct-person-item:first-child {
+.fd-ct-celebrity-item:first-child {
   margin-left: 0;
 }
 
-.fd-ct-person-img {
+.fd-ct-celebrity-img {
   width: 280rpx;
   height: 400rpx;
 }
 
-.fd-ct-person-name {
+.fd-ct-celebrity-name {
   display: block;
   color: #666;
 
 }
 
-.fd-ct-person-role {
+.fd-ct-celebrity-role {
   display: block;
   color: #999
 }

@@ -1,0 +1,29 @@
+<!--components/celebrityCover/index.wxml-->
+<!-- cc: celebrity-cover -->
+
+<view class="cc">
+  <image
+    class="cc-avatar"
+    src="{{celebrityCover.avatar}}">
+  </image>
+
+  <view class="cc-attr-wrap">
+
+    <view class="cc-attr-item">
+      <text class="cc-name">{{celebrityCover.name}}</text>
+    </view>
+
+    <view class="cc-attr-item">
+      <text>{{celebrityCover.nameEn}}</text>
+    </view>
+
+    <view class="cc-attr-item">
+      <text>{{celebrityCover.place}}</text>
+    </view>
+
+    <view class="cc-attr-item">
+      <text>{{celebrityCover.works}}</text>
+    </view>
+
+  </view>
+</view>

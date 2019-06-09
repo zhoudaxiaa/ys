@@ -1,6 +1,6 @@
 /* pages/personInfo/index.wxss */
 
-.fp-hd {
+.fc-hd {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@
   background-color: rgba(0,0,0,.2)
 }
 
-.fp-hd-bg {
+.fc-hd-bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -22,7 +22,7 @@
   transform: scale(1.2);
 }
 
-.fp-avatar {
+.fc-avatar {
   margin-top: 20rpx;
   height: 300rpx;
   width: 300rpx;
@@ -30,7 +30,7 @@
   box-shadow: 0, 0, 160rpx, rgba(255,255,255,.6);
 }
 
-.fp-name {
+.fc-name {
   margin-top: 20rpx;
   padding: 5rpx 20rpx;
   border-radius: 50rpx;
@@ -38,7 +38,7 @@
   font-size: 32rpx;
 }
 
-.fp-name-en {
+.fc-name-en {
   padding: 10rpx 0;
 }
 

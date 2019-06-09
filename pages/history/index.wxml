@@ -3,64 +3,99 @@
 <!-- his: history -->
 <view class="his-tab-wrap">
 
-  <view class="his-tab-item his-tab-active">
+  <view
+    data-tab="film"
+    bindtap="toggleTab"
+    class="his-tab-item {{tabName === 'film' ? 'his-tab-active' : ''}}">
     <text>电影</text>
   </view>
   
-  <view class="his-tab-item">
+  <view
+    data-tab="celebrity"
+    bindtap="toggleTab"
+    class="his-tab-item {{tabName === 'celebrity' ? 'his-tab-active' : ''}}">
     <text>人物</text>
   </view>
 
 </view>
 
-<block hidden="{{isFilms}}">
-    <view class="his-film-cont">
+<!-- 电影记录 -->
+<view hidden="{{tabName === 'celebrity' || false}}" class="his-cont">
 
-      <block
-        wx:if="{{historyFilms.length === 0}}">
-        
-        <view class="no-films">
-          <view class="no-tip">亲，目前木有浏览记录哦！</view>
+  <block
+    wx:if="{{historyFilms.length === 0}}">
     
-          <navigator url="/pages/popular/index">
-            <text class="no-action">去逛逛</text>
-          </navigator>
-        </view>
-    
-      </block>
-
-      <block wx:else>
-        
-        <block
-          wx:for="{{historyFilms}}"
-          wx:key="{{item.time}}">
-      
-          <view class="his-film-item">
-      
-            <text class="his-film-time">{{item.time}}</text>
-      
-            <navigator url="/pages/filmDetail/index?id={{item.films.id}}">
-              <film-cover
-                film-cover="{{item.films}}"
-                is-film-detail="{{false}}">
-              </film-cover>
-            </navigator>
-      
-          </view>
-      
-        </block>
-      
-        <view class="film-more">
-          <text>没有更多内容了</text>
-        </view>
-
-      </block>
-    
+    <view class="no-tips-wrap">
+      <no-tips></no-tips>
     </view>
-</block>
 
-<block hidden="{{!isFilms}}">
-  <view class="his-person-cont">
-    666
+  </block>
+
+  <block wx:else>
+    
+    <block
+      wx:for="{{historyFilms}}"
+      wx:key="{{item.time}}">
+  
+      <view class="his-item">
+  
+        <text class="his-time">{{item.time}}</text>
+  
+        <navigator url="/pages/filmDetail/index?id={{item.films.id}}">
+          <film-cover
+            film-cover="{{item.films}}"
+            is-film-detail="{{false}}">
+          </film-cover>
+        </navigator>
+  
+      </view>
+  
+    </block>
+  
+    <view class="cont-more">
+      <text>没有更多内容了</text>
+    </view>
+
+  </block>
+
+</view>
+
+<!-- 人物记录 -->
+<view hidden="{{tabName === 'film' || false}}" class="his-cont">
+
+    <block
+      wx:if="{{historyCelebrity.length === 0}}">
+      
+      <view class="no-tips-wrap">
+        <no-tips></no-tips>
+      </view>
+  
+    </block>
+  
+    <block wx:else>
+      
+      <block
+        wx:for="{{historyCelebrity}}"
+        wx:key="{{item.time}}">
+    
+        <view class="his-item">
+    
+          <text class="his-time">{{item.time}}</text>
+    
+          <navigator url="/pages/celebrityDetail/index?id={{item.celebritys.id}}">
+            <celebrity-cover
+              celebrity-cover="{{item.celebritys}}">
+            </celebrity-cover>
+          </navigator>
+    
+        </view>
+    
+      </block>
+    
+      <view class="cont-more">
+        <text>没有更多内容了</text>
+      </view>
+  
+    </block>
+  
   </view>
-</block>
